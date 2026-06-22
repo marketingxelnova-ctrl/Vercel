@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Xelnova | India's Trusted Online Marketplace</title>
+  <meta name="description" content="Learn about Xelnova, India's trusted online marketplace for quality products, verified sellers, secure shopping, and fast nationwide delivery.">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #F7F9FC;
+      --surface: #FFFFFF;
+      --border: #E4EAF2;
+      --primary: #1A56C4;
+      --primary-light: #EEF3FD;
+      --accent: #F59E0B;
+      --accent-light: #FEF3C7;
+      --text-dark: #0F1C3F;
+      --text-mid: #3D4F72;
+      --text-muted: #6B7FA3;
+      --pill-bg: #E8EFFC;
+      --pill-text: #1A56C4;
+      --radius: 14px;
+      --shadow-sm: 0 2px 10px rgba(26,86,196,0.07);
+      --shadow-md: 0 6px 30px rgba(26,86,196,0.11);
+    }
+
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+    html { scroll-behavior: smooth; }
+
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,249,252,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { background: #1344a8 !important; transform: translateY(-1px); }
+
+
+    /* ─── HERO ─── */
+    .hero {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pill-bg);
+      color: var(--pill-text);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.18;
+      color: var(--text-dark);
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--primary);
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .btn-group { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 18px rgba(26,86,196,0.25);
+    }
+    .btn-primary:hover { background: #1344a8; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,86,196,0.3); }
+    .btn-outline {
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      padding: 13px 28px;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-outline:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+
+    .hero-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-card .stat-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+    }
+    .stat-card .stat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+    .stat-card.accent { background: var(--primary); }
+    .stat-card.accent .stat-num { color: #fff; }
+    .stat-card.accent .stat-label { color: rgba(255,255,255,0.7); }
+    .stat-card.wide { grid-column: span 2; display: flex; align-items: center; gap: 18px; }
+    .stat-card.wide .icon { font-size: 2rem; }
+
+
+    /* ─── SECTION WRAPPER ─── */
+    section { padding: 72px 24px; }
+    .container { max-width: 1160px; margin: auto; }
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 580px;
+      margin-bottom: 48px;
+    }
+    .divider { border: none; border-top: 1px solid var(--border); }
+
+
+    /* ─── STORY SECTION ─── */
+    #story { background: var(--surface); }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .tl-item {
+      display: flex;
+      gap: 18px;
+      padding-bottom: 28px;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .tl-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      z-index: 1;
+    }
+    .tl-content h4 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .tl-content p { font-size: 0.9rem; color: var(--text-mid); }
+
+
+    /* ─── VISION / MISSION ─── */
+    #vision { background: var(--bg); }
+    .vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .vm-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .vm-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+    .vm-card.accent-card::before { background: var(--accent); }
+    .vm-card .icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+    .vm-card.accent-card .icon-wrap { background: var(--accent-light); }
+    .vm-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .vm-card p { font-size: 0.95rem; color: var(--text-mid); }
+
+
+    /* ─── OFFERINGS ─── */
+    #offerings { background: var(--surface); }
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .offer-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .offer-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .offer-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .offer-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .offer-card p { font-size: 0.88rem; color: var(--text-mid); }
+
+
+    /* ─── VALUES ─── */
+    #values { background: var(--primary); }
+    #values .section-eyebrow { color: rgba(255,255,255,0.6); }
+    #values .section-title { color: #fff; }
+    #values .section-desc { color: rgba(255,255,255,0.75); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .value-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 24px 18px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .value-card:hover { background: rgba(255,255,255,0.18); }
+    .value-card .v-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .value-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .value-card p { font-size: 0.8rem; color: rgba(255,255,255,0.65); }
+
+
+    /* ─── SELLERS ─── */
+    #sellers { background: var(--bg); }
+    .sellers-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .benefit-list { display: flex; flex-direction: column; gap: 18px; }
+    .benefit-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .benefit-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .benefit-item h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .benefit-item p { font-size: 0.87rem; color: var(--text-mid); }
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .cta-box h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-box p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 24px; }
+    .cta-box .btn-primary { display: inline-block; }
+
+
+    /* ─── BLOG ─── */
+    #blog { background: var(--surface); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .blog-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .blog-thumb {
+      height: 160px;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .blog-body { padding: 22px 20px; }
+    .blog-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 99px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .blog-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .blog-card p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; }
+    .blog-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .blog-link:hover { text-decoration: underline; }
+    .blog-link::after { content: '→'; }
+
+
+    /* Blog Embed placeholder */
+    .blog-embed-section {
+      margin-top: 48px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .blog-embed-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 24px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .blog-embed-header span { opacity: 0.7; font-size: 0.82rem; font-weight: 400; }
+    iframe.blog-iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      display: block;
+      background: var(--bg);
+    }
+    .blog-embed-notice {
+      padding: 40px;
+      text-align: center;
+      color: var(--text-muted);
+      background: var(--bg);
+      font-size: 0.9rem;
+    }
+    .blog-embed-notice strong { display: block; font-size: 1rem; color: var(--text-dark); margin-bottom: 8px; }
+
+
+    /* ─── TRUST STRIP ─── */
+    .trust-strip {
+      background: var(--accent-light);
+      border-top: 1px solid #f0d080;
+      border-bottom: 1px solid #f0d080;
+    }
+    .trust-inner {
+      max-width: 1160px;
+      margin: auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .trust-item .t-icon { font-size: 1.1rem; }
+
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.7);
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: auto;
+      padding: 56px 24px 32px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand .logo { color: #fff; font-size: 1.3rem; }
+    .footer-brand p { font-size: 0.88rem; margin-top: 12px; line-height: 1.65; max-width: 260px; }
+    footer h5 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    footer ul li a {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer ul li a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1160px;
+      margin: auto;
+      padding: 20px 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero, .story-grid, .vm-grid, .sellers-split { grid-template-columns: 1fr; }
+      .hero-visual { grid-template-columns: 1fr 1fr; }
+      .offerings-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid { grid-template-columns: repeat(3, 1fr); }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .offerings-grid, .blog-grid, .values-grid { grid-template-columns: 1fr; }
+      .hero-visual { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">Xel<span>nova</span></a>
+      <ul class="nav-links">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#offerings">What We Offer</a></li>
+        <li><a href="#sellers">Sell With Us</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">India's Emerging Marketplace</div>
+      <h1>Where Quality Meets <em>Opportunity</em></h1>
+      <p>Xelnova connects millions of shoppers with verified sellers across electronics, fashion, home essentials, and more — built on trust, powered by technology.</p>
+      <div class="btn-group">
+        <a href="#offerings" class="btn-primary">Explore Products</a>
+        <a href="#sellers" class="btn-outline">Start Selling</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-card accent">
+        <div class="stat-num">2024</div>
+        <div class="stat-label">Year Founded</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Pan-India</div>
+        <div class="stat-label">Reach & Coverage</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Verified Sellers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Secure</div>
+        <div class="stat-label">Payment Processing</div>
+      </div>
+      <div class="stat-card wide">
+        <span class="icon">🛍️</span>
+        <div>
+          <div class="stat-num" style="font-size:1.1rem;">Electronics · Fashion · Home · Lifestyle</div>
+          <div class="stat-label">Diverse product categories under one roof</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="t-icon">✅</span> Authentic Products</div>
+      <div class="trust-item"><span class="t-icon">🔒</span> Secure Transactions</div>
+      <div class="trust-item"><span class="t-icon">🚚</span> Fast Delivery</div>
+      <div class="trust-item"><span class="t-icon">📞</span> Responsive Support</div>
+      <div class="trust-item"><span class="t-icon">💳</span> Competitive Pricing</div>
+    </div>
+  </div>
+
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <div class="section-eyebrow">Our Story</div>
+          <h2 class="section-title">Built on a Simple but Ambitious Idea</h2>
+          <p style="color:var(--text-mid); font-size:1rem; line-height:1.8; margin-bottom:24px;">
+            Xelnova was born from a clear recognition: millions of Indian consumers needed a dependable online marketplace offering genuine products, transparent pricing, and great service — while businesses needed a platform to reach customers nationwide.
+          </p>
+          <p style="color:var(--text-mid); font-size:1rem; line-height:1.8; margin-bottom:32px;">
+            Driven by this dual purpose, we launched in 2024 with a mission to democratize e-commerce and create real opportunity for everyone in the digital marketplace ecosystem.
+          </p>
+          <a href="#offerings" class="btn-primary">Discover What We Offer</a>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">1</div>
+            <div class="tl-content">
+              <h4>The Idea Spark</h4>
+              <p>Founders identified a gap — consumers needed trust, and sellers needed reach. A single platform could solve both.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2</div>
+            <div class="tl-content">
+              <h4>Xelnova Launched — 2024</h4>
+              <p>The platform went live with verified sellers, secure payments, and a commitment to quality across every category.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">3</div>
+            <div class="tl-content">
+              <h4>Growing Nationwide</h4>
+              <p>Customers across hundreds of cities and a growing network of trusted sellers joined the marketplace ecosystem.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">4</div>
+            <div class="tl-content">
+              <h4>The Road Ahead</h4>
+              <p>Expanding categories, leveraging AI, and strengthening logistics to build India's most trusted marketplace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="divider"/>
+
+
+  <!-- VISION & MISSION -->
+  <section id="vision">
+    <div class="container">
+      <div class="section-eyebrow">Our Purpose</div>
+      <h2 class="section-title">Vision & Mission</h2>
+      <p class="section-desc">Two complementary commitments that guide every decision we make at Xelnova.</p>
+      <div class="vm-grid">
+        <div class="vm-card">
+          <div class="icon-wrap">🔭</div>
+          <h3>Our Vision</h3>
+          <p>To become India's most trusted and preferred e-commerce marketplace — a digital shopping ecosystem that combines convenience, innovation, affordability, and reliability. We aspire to make quality products accessible to every consumer, everywhere, and give every seller an equal opportunity to grow.</p>
+        </div>
+        <div class="vm-card accent-card">
+          <div class="icon-wrap">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To democratize e-commerce by making quality products accessible to customers across India while empowering sellers with the tools, technology, and opportunities needed to expand their businesses. We strive for a marketplace where everyone — customer and seller alike — finds lasting value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="divider"/>
+
+
+  <!-- OFFERINGS -->
+  <section id="offerings">
+    <div class="container">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">A Marketplace Built for Modern India</h2>
+      <p class="section-desc">Explore a diverse and expanding range of categories, all backed by verified sellers, competitive prices, and convenient delivery.</p>
+      <div class="offerings-grid">
+        <div class="offer-card">
+          <span class="offer-icon">📱</span>
+          <h4>Electronics</h4>
+          <p>Smartphones, laptops, accessories, and the latest tech from verified brands and trusted sellers.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">👗</span>
+          <h4>Fashion</h4>
+          <p>Clothing, footwear, and accessories for every style and every occasion, across all demographics.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">🏠</span>
+          <h4>Home Essentials</h4>
+          <p>Everything your home needs — from kitchenware and décor to cleaning and storage solutions.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">✨</span>
+          <h4>Lifestyle Products</h4>
+          <p>Beauty, wellness, sports, and personal care products curated for today's Indian consumer.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">🔌</span>
+          <h4>Accessories</h4>
+          <p>Bags, cables, gadgets, and everyday carry items from reliable sellers at competitive prices.</p>
+        </div>
+        <div class="offer-card">
+          <span class="offer-icon">🛒</span>
+          <h4>And Much More</h4>
+          <p>New categories launching regularly as we expand our marketplace to meet evolving consumer needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VALUES -->
+  <section id="values">
+    <div class="container">
+      <div class="section-eyebrow">Our Core Values</div>
+      <h2 class="section-title" style="color:#fff;">What We Stand For</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.72);">Five principles that define how we build, operate, and grow — every single day.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="v-icon">💛</span>
+          <h4>Customer Satisfaction</h4>
+          <p>Customers are at the center of every decision we make.</p>
+        </div>
+        <div class="value-card">
+          <span class="v-icon">🤝</span>
+          <h4>Trust & Transparency</h4>
+          <p>Honesty and accountability define every relationship we build.</p>
+        </div>
+        <div class="value-card">
+          <span class="v-icon">💡</span>
+          <h4>Innovation</h4>
+          <p>We continuously improve through technology and creative thinking.</p>
+        </div>
+        <div class="value-card">
+          <span class="v-icon">🌏</span>
+          <h4>Accessibility</h4>
+          <p>Quality products for every consumer, regardless of location.</p>
+        </div>
+        <div class="value-card">
+          <span class="v-icon">🏆</span>
+          <h4>Excellence</h4>
+          <p>High standards across technology, operations, and service — always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SELLERS -->
+  <section id="sellers">
+    <div class="container">
+      <div class="sellers-split">
+        <div>
+          <div class="section-eyebrow">Empowering Sellers</div>
+          <h2 class="section-title">Grow Your Business With Xelnova</h2>
+          <p style="color:var(--text-mid); font-size:1rem; margin-bottom:32px; max-width:480px;">We believe the success of our marketplace depends on the success of our sellers. Whether you're an entrepreneur, manufacturer, retailer, or emerging brand — Xelnova gives you what you need to thrive.</p>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <div class="benefit-icon">🌐</div>
+              <div>
+                <h4>Nationwide Customer Reach</h4>
+                <p>Connect with buyers across hundreds of cities in India from a single seller dashboard.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">💰</div>
+              <div>
+                <h4>Secure Payment Systems</h4>
+                <p>Reliable, fast, and transparent payment processing so you can focus on selling.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">📦</div>
+              <div>
+                <h4>Streamlined Order Management</h4>
+                <p>Simple tools to manage inventory, orders, and customer communication in one place.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">📈</div>
+              <div>
+                <h4>Technology-Driven Growth</h4>
+                <p>Leverage our platform's intelligent recommendations and search to put your products in front of the right buyers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cta-box" id="contact">
+          <h3>Ready to Start Selling?</h3>
+          <p>Join Xelnova's growing seller community and get access to one of India's most promising digital marketplaces. It starts with a simple registration.</p>
+          <a href="mailto:sellers@xelnova.in" class="btn-primary">Register as a Seller</a>
+          <br/><br/>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Already a seller? <a href="#" style="color:var(--primary); font-weight:600;">Sign in to your dashboard →</a></p>
+          <hr style="border:none; border-top:1px solid var(--border); margin:20px 0;"/>
+          <p style="font-size:0.85rem; color:var(--text-muted);">📧 sellers@xelnova.in</p>
+          <p style="font-size:0.85rem; color:var(--text-muted);">📍 India | Available Nationwide</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="divider"/>
+
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-eyebrow">Blog & Resources</div>
+      <h2 class="section-title">Insights from Xelnova</h2>
+      <p class="section-desc">Stay updated with shopping guides, seller tips, and the latest from India's e-commerce landscape.</p>
+
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-thumb">🛍️</div>
+          <div class="blog-body">
+            <span class="blog-tag">Shopping Tips</span>
+            <h4>How to Shop Smarter on Xelnova: A Buyer's Guide</h4>
+            <p>Discover how to find the best deals, verify sellers, and make the most of your Xelnova shopping experience.</p>
+            <a href="#" class="blog-link">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb">📦</div>
+          <div class="blog-body">
+            <span class="blog-tag">Seller Guide</span>
+            <h4>Top 5 Tips for New Sellers Joining Xelnova in 2025</h4>
+            <p>Everything you need to know about listing your first product, managing orders, and growing your sales.</p>
+            <a href="#" class="blog-link">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb">💡</div>
+          <div class="blog-body">
+            <span class="blog-tag">Industry Insights</span>
+            <h4>India's E-Commerce Boom: Why 2025 Is a Pivotal Year</h4>
+            <p>A look at the trends shaping digital commerce in India and how Xelnova is positioned at the center of this growth.</p>
+            <a href="#" class="blog-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BLOG EMBED SECTION -->
+      <div class="blog-embed-section">
+        <div class="blog-embed-header">
+          📰 Xelnova Blog Feed
+          <span>— Replace the src below with your actual blog URL to embed it here</span>
+        </div>
+        <!--
+          TO EMBED YOUR BLOG: Replace the src attribute below with your blog URL.
+          Example: <iframe class="blog-iframe" src="https://blog.xelnova.in" title="Xelnova Blog"></iframe>
+          Note: The blog website must allow embedding (no X-Frame-Options restrictions).
+          For WordPress blogs, you may need a plugin or use an RSS feed widget instead.
+        -->
+        <div class="blog-embed-notice">
+          <strong>Embed Your Blog Here</strong>
+          To embed your blog, replace the placeholder in the HTML source with your blog URL in the <code>&lt;iframe&gt;</code> tag below this notice. Your blog must allow iframe embedding for this to work.
+          <br/><br/>
+          <a href="#" class="btn-primary" style="display:inline-block; text-decoration:none;">Visit Our Full Blog →</a>
+        </div>
+        <!-- Uncomment and update src when ready:
+        <iframe class="blog-iframe" src="https://your-blog-url.com" title="Xelnova Blog" loading="lazy"></iframe>
+        -->
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Xel<span style="color:var(--accent);">nova</span></a>
+        <p>India's emerging marketplace for quality products, trusted sellers, and a seamless shopping experience built for every Indian consumer.</p>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#vision">Vision & Mission</a></li>
+          <li><a href="#values">Our Values</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Marketplace</h5>
+        <ul>
+          <li><a href="#offerings">Browse Products</a></li>
+          <li><a href="#sellers">Sell on Xelnova</a></li>
+          <li><a href="#">Seller Dashboard</a></li>
+          <li><a href="#">Verified Brands</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="mailto:hello@xelnova.in">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024–2025 Xelnova Private Limited. All rights reserved.</span>
+      <span>
+        <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none; margin-right:18px;">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;">Terms of Use</a>
+      </span>
+    </div>
+  </footer>
+
+
+</body>
+</html>
+
